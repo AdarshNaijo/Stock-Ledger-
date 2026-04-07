@@ -74,6 +74,15 @@
   .pnl-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
   .pnl-bar-fill.pos { background: linear-gradient(90deg, var(--accent-dim), var(--accent)); }
   .pnl-bar-fill.neg { background: linear-gradient(90deg, var(--red-dim), var(--red)); }
+    @media (max-width: 600px) {
+    .summary { grid-template-columns: 1fr 1fr; }
+    .summary .card:last-child { grid-column: span 2; }
+    .add-form { grid-template-columns: 1fr 1fr; }
+    .add-form .btn { grid-column: span 2; }
+    .ledger-head, .ledger-row { grid-template-columns: 80px 1fr 90px 90px 60px; }
+    .ledger-head span:nth-child(4), .ledger-row > *:nth-child(4) { display: none; }
+    }
+  
 </style>
 </head>
 <body>
